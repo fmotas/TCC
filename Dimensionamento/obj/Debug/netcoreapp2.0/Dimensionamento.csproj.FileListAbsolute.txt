@@ -1,0 +1,11 @@
+D:\Repository\Dimensionamento\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.deps.json
+D:\Repository\Dimensionamento\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.runtimeconfig.json
+D:\Repository\Dimensionamento\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.runtimeconfig.dev.json
+D:\Repository\Dimensionamento\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.dll
+D:\Repository\Dimensionamento\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.csprojResolveAssemblyReference.cache
+D:\Repository\Dimensionamento\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.csproj.CoreCompileInputs.cache
+D:\Repository\Dimensionamento\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.AssemblyInfoInputs.cache
+D:\Repository\Dimensionamento\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.AssemblyInfo.cs
+D:\Repository\Dimensionamento\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.pdb
+D:\Repository\Dimensionamento\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.dll
+D:\Repository\Dimensionamento\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.pdb

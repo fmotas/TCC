@@ -1,0 +1,129 @@
+﻿@model Dimensionamento.Entities.DadosDeProjeto
+
+@{
+    ViewData["Title"] = "DadosDeProjeto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DadosDeProjeto</h2>
+
+<h4>DadosDeProjeto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DadosDeProjeto">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Tipo_de_Casco_ou_Costado" class="control-label"></label>
+                <input asp-for="Tipo_de_Casco_ou_Costado" class="form-control" />
+                <span asp-validation-for="Tipo_de_Casco_ou_Costado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo_de_Tampo" class="control-label"></label>
+                <input asp-for="Tipo_de_Tampo" class="form-control" />
+                <span asp-validation-for="Tipo_de_Tampo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pressao_de_Operacao_Maxima" class="control-label"></label>
+                <input asp-for="Pressao_de_Operacao_Maxima" class="form-control" />
+                <span asp-validation-for="Pressao_de_Operacao_Maxima" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pressao_de_Operacao_Minima" class="control-label"></label>
+                <input asp-for="Pressao_de_Operacao_Minima" class="form-control" />
+                <span asp-validation-for="Pressao_de_Operacao_Minima" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pressao_Interna_de_Projeto" class="control-label"></label>
+                <input asp-for="Pressao_Interna_de_Projeto" class="form-control" />
+                <span asp-validation-for="Pressao_Interna_de_Projeto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pressao_Externa_de_Projeto" class="control-label"></label>
+                <input asp-for="Pressao_Externa_de_Projeto" class="form-control" />
+                <span asp-validation-for="Pressao_Externa_de_Projeto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Temperatura_de_Operacao" class="control-label"></label>
+                <input asp-for="Temperatura_de_Operacao" class="form-control" />
+                <span asp-validation-for="Temperatura_de_Operacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Temperatura_de_Projeto" class="control-label"></label>
+                <input asp-for="Temperatura_de_Projeto" class="form-control" />
+                <span asp-validation-for="Temperatura_de_Projeto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diametro_Interno" class="control-label"></label>
+                <input asp-for="Diametro_Interno" class="form-control" />
+                <span asp-validation-for="Diametro_Interno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comprimento_Entre_Tangentes" class="control-label"></label>
+                <input asp-for="Comprimento_Entre_Tangentes" class="form-control" />
+                <span asp-validation-for="Comprimento_Entre_Tangentes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Volume_Interno" class="control-label"></label>
+                <input asp-for="Volume_Interno" class="form-control" />
+                <span asp-validation-for="Volume_Interno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sobrespessura_de_Corrosao" class="control-label"></label>
+                <input asp-for="Sobrespessura_de_Corrosao" class="form-control" />
+                <span asp-validation-for="Sobrespessura_de_Corrosao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fluido" class="control-label"></label>
+                <input asp-for="Fluido" class="form-control" />
+                <span asp-validation-for="Fluido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gravidade_Especifica" class="control-label"></label>
+                <input asp-for="Gravidade_Especifica" class="form-control" />
+                <span asp-validation-for="Gravidade_Especifica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Teste_de_Pressao_Hidrostatica" class="control-label"></label>
+                <input asp-for="Teste_de_Pressao_Hidrostatica" class="form-control" />
+                <span asp-validation-for="Teste_de_Pressao_Hidrostatica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Juntas_de_Topo" class="control-label"></label>
+                <input asp-for="Juntas_de_Topo" class="form-control" />
+                <span asp-validation-for="Juntas_de_Topo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Radiografia_do_Casco_e_Tampo" class="control-label"></label>
+                <input asp-for="Radiografia_do_Casco_e_Tampo" class="form-control" />
+                <span asp-validation-for="Radiografia_do_Casco_e_Tampo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Eficiencia_de_Junta_do_Costado" class="control-label"></label>
+                <input asp-for="Eficiencia_de_Junta_do_Costado" class="form-control" />
+                <span asp-validation-for="Eficiencia_de_Junta_do_Costado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Eficiencia_de_Junta_dos_Tampos" class="control-label"></label>
+                <input asp-for="Eficiencia_de_Junta_dos_Tampos" class="form-control" />
+                <span asp-validation-for="Eficiencia_de_Junta_dos_Tampos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fator_do_Tampo_Eliptico" class="control-label"></label>
+                <input asp-for="Fator_do_Tampo_Eliptico" class="form-control" />
+                <span asp-validation-for="Fator_do_Tampo_Eliptico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
