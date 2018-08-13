@@ -2,8 +2,7 @@
 
 namespace Dimensionamento.Entities
 {
-	public class DadosDeProjeto
+	public class DadosDeProjeto : DadosParaEspessuraDoCostado
 	{
-
 	}
 }

@@ -1,0 +1,10 @@
+D:\Repository\Dimensionamento\Dimensionamento
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=Dimensionamento
+--content-root=D:\Repository\Dimensionamento\Dimensionamento
+--file=D:\Repository\Dimensionamento\Dimensionamento\Views\Dimensionar\DadosDeProjeto.cshtml
+--file=D:\Repository\Dimensionamento\Dimensionamento\Views\Shared\Error.cshtml
+--file=D:\Repository\Dimensionamento\Dimensionamento\Views\Shared\_Layout.cshtml
+--file=D:\Repository\Dimensionamento\Dimensionamento\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=D:\Repository\Dimensionamento\Dimensionamento\Views\_ViewImports.cshtml
+--file=D:\Repository\Dimensionamento\Dimensionamento\Views\_ViewStart.cshtml
