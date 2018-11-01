@@ -32,8 +32,8 @@ namespace DimensionamentoTests
 			},
 			Materiais = new Materiais
 			{
-				Cascos_e_Tampos = "SA- 516 Gr.70",
-				Suportes = "SA - 36",
+				Cascos_e_Tampos = "SA-516 Gr.70",
+				Suportes = "SA-36",
 				Pescoco_de_Bocais = "SA-105/SA-106 Gr.B",
 				Boca_de_Visita = "SA-516 Gr.70",
 				Luvas = "SA-105",

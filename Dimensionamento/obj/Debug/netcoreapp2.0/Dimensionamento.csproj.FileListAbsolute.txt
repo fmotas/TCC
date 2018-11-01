@@ -9,3 +9,14 @@ D:\Repository\Dimensionamento\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensiona
 D:\Repository\Dimensionamento\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.pdb
 D:\Repository\Dimensionamento\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.dll
 D:\Repository\Dimensionamento\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.pdb
+D:\Repository\New folder\TCC\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.deps.json
+D:\Repository\New folder\TCC\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.runtimeconfig.json
+D:\Repository\New folder\TCC\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.runtimeconfig.dev.json
+D:\Repository\New folder\TCC\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.dll
+D:\Repository\New folder\TCC\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.pdb
+D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.csproj.CoreCompileInputs.cache
+D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.AssemblyInfoInputs.cache
+D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.AssemblyInfo.cs
+D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.dll
+D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.pdb
+D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.csprojResolveAssemblyReference.cache

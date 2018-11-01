@@ -1,0 +1,17 @@
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\DimensionamentoTests.deps.json
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\DimensionamentoTests.runtimeconfig.json
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\DimensionamentoTests.runtimeconfig.dev.json
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\DimensionamentoTests.dll
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\DimensionamentoTests.pdb
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\Dimensionamento.dll
+D:\Repository\New folder\TCC\DimensionamentoTests\bin\Release\netcoreapp2.0\Dimensionamento.pdb
+D:\Repository\New folder\TCC\DimensionamentoTests\obj\Release\netcoreapp2.0\DimensionamentoTests.csprojResolveAssemblyReference.cache
+D:\Repository\New folder\TCC\DimensionamentoTests\obj\Release\netcoreapp2.0\DimensionamentoTests.csproj.CoreCompileInputs.cache
+D:\Repository\New folder\TCC\DimensionamentoTests\obj\Release\netcoreapp2.0\DimensionamentoTests.AssemblyInfoInputs.cache
+D:\Repository\New folder\TCC\DimensionamentoTests\obj\Release\netcoreapp2.0\DimensionamentoTests.AssemblyInfo.cs
+D:\Repository\New folder\TCC\DimensionamentoTests\obj\Release\netcoreapp2.0\DimensionamentoTests.csproj.CopyComplete
+D:\Repository\New folder\TCC\DimensionamentoTests\obj\Release\netcoreapp2.0\DimensionamentoTests.dll
+D:\Repository\New folder\TCC\DimensionamentoTests\obj\Release\netcoreapp2.0\DimensionamentoTests.pdb
