@@ -38,7 +38,7 @@ namespace Dimensionamento
 			}
 			else
 			{
-				app.UseExceptionHandler("/Home/Error");
+				app.UseExceptionHandler("/Dimensionar/Error");
 			}
 
 			app.UseStaticFiles();

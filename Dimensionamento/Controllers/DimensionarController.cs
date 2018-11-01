@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Options;
 using System;
+using System.Diagnostics;
 
 namespace Dimensionamento.Controllers
 {
@@ -16,7 +17,7 @@ namespace Dimensionamento.Controllers
 		{
 			_dbConfig = dbConfig;
 		}
-
+		
 		[HttpGet]
 		public IActionResult DadosDeProjeto()
 		{
@@ -91,6 +92,11 @@ namespace Dimensionamento.Controllers
 								   Environment.NewLine +
 								   textoResultadoComSobrespessuradeCorrosao;
 			return textoInformativo;
+		}
+
+		public IActionResult Error()
+		{
+			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
 	}
 }

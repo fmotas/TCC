@@ -2,6 +2,7 @@ D:\Repository\New folder\TCC\Dimensionamento
 --output-path=obj\Release\netcoreapp2.0\
 --application-name=Dimensionamento
 --content-root=D:\Repository\New folder\TCC\Dimensionamento
+--file=D:\Repository\New folder\TCC\Dimensionamento\Views\Dimensionar\Contact.cshtml
 --file=D:\Repository\New folder\TCC\Dimensionamento\Views\Dimensionar\DadosDeProjeto.cshtml
 --file=D:\Repository\New folder\TCC\Dimensionamento\Views\Shared\Error.cshtml
 --file=D:\Repository\New folder\TCC\Dimensionamento\Views\Shared\_Layout.cshtml
