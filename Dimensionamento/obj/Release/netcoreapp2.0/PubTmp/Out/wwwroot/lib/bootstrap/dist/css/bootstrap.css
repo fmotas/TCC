@@ -238,9 +238,9 @@ th {
   h3 {
     page-break-after: avoid;
   }
-  .navbar {
-    display: none;
-  }
+	.navbar {
+		display: none;
+	}
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
@@ -4589,7 +4589,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: #5b5ffa;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
@@ -4601,7 +4601,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
-  color: #9d9d9d;
+  color: #080808;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #9d9d9d;
@@ -4624,7 +4624,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: transparent;
 }
 .navbar-inverse .navbar-toggle {
-  border-color: #333;
+  border-color: #337ab7;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
