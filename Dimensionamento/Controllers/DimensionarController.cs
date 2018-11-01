@@ -37,6 +37,12 @@ namespace Dimensionamento.Controllers
 			return View();
 		}
 
+		[HttpGet]
+		public IActionResult Contact()
+		{
+			return View();
+		}
+
 		[HttpPost]
 		public IActionResult DadosDeProjeto(DadosDeProjeto dados)
 		{
