@@ -1,6 +1,7 @@
 ﻿using Dimensionamento.Cálculos;
 using Dimensionamento.Entities;
 using Dimensionamento.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Options;
@@ -45,8 +46,11 @@ namespace Dimensionamento.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult DadosDeProjeto(DadosDeProjeto dados)
+		public IActionResult DadosDeProjeto(DadosDeProjeto dados, string Materiais)
 		{
+			dados.Materiais = new Entities.Materiais();
+			dados.Materiais.Cascos_e_Tampos = Materiais;
+
 			var textoInformativo = TextoInformativo(dados);
 
 			return Content(textoInformativo);
@@ -75,7 +79,7 @@ namespace Dimensionamento.Controllers
 								   Environment.NewLine +
 								   $"Diâmetro Interno = {dados.Diametro_Interno} mm," +
 								   Environment.NewLine +
-								   $"Máxima Tensão Admissível = 157 MPa," +
+								   $"Máxima Tensão Admissível = {dados.} MPa," +
 								   Environment.NewLine +
 								   $"Coeficiente de Eficiência de Solda = {dados.Eficiencia_de_Junta_do_Costado}," +
 								   Environment.NewLine +

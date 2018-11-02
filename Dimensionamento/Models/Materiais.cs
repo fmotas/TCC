@@ -35,7 +35,7 @@ namespace Dimensionamento.Models
 
 				if (!string.IsNullOrEmpty(materiais.TypeOrGrade))
 				{
-					typeOrGrade = "GR." + materiais.TypeOrGrade;
+					typeOrGrade = "Gr." + materiais.TypeOrGrade;
 				}
 				yield return new Materiais(materiais.SpecNo + typeOrGrade);
 			}

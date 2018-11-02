@@ -18,7 +18,10 @@
 			</div>
 			<div class="form-group">
 				<label asp-for="Materiais" class="control-label"></label>
-				@*@<input asp-for="Materiais.Cascos_e_Tampos" class="form-control" />*@
+				@*<label asp-for="Fluido" class="control-label"></label>
+		<span asp-validation-for="Fluido" class="text-danger"></span>
+		@Html.DropDownList("Fluidos", null, new { @class = "form-control" })*@
+				@*<input asp-for="Materiais.Cascos_e_Tampos" class="form-control" value="SA-516 Gr.70"/>*@
 				@Html.DropDownList("Materiais", null, new { @class = "form-control" })
 				<span asp-validation-for="Materiais.Cascos_e_Tampos" class="text-danger"></span>
 			</div>
@@ -29,52 +32,52 @@
 			</div>
 			<div class="form-group">
 				<label asp-for="Pressao_de_Operacao_Maxima" class="control-label"></label>
-				<input asp-for="Pressao_de_Operacao_Maxima" class="form-control" />
+				<input asp-for="Pressao_de_Operacao_Maxima" class="form-control" value="2" />
 				<span asp-validation-for="Pressao_de_Operacao_Maxima" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Pressao_de_Operacao_Minima" class="control-label"></label>
-				<input asp-for="Pressao_de_Operacao_Minima" class="form-control" />
+				<input asp-for="Pressao_de_Operacao_Minima" class="form-control" value="1.5" />
 				<span asp-validation-for="Pressao_de_Operacao_Minima" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Pressao_Interna_de_Projeto" class="control-label"></label>
-				<input asp-for="Pressao_Interna_de_Projeto" class="form-control" />
+				<input asp-for="Pressao_Interna_de_Projeto" class="form-control" value="2.5" />
 				<span asp-validation-for="Pressao_Interna_de_Projeto" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Pressao_Externa_de_Projeto" class="control-label"></label>
-				<input asp-for="Pressao_Externa_de_Projeto" class="form-control" />
+				<input asp-for="Pressao_Externa_de_Projeto" class="form-control" value="0.1030" />
 				<span asp-validation-for="Pressao_Externa_de_Projeto" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Temperatura_de_Operacao" class="control-label"></label>
-				<input asp-for="Temperatura_de_Operacao" class="form-control" />
+				<input asp-for="Temperatura_de_Operacao" class="form-control" value="40" />
 				<span asp-validation-for="Temperatura_de_Operacao" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Temperatura_de_Projeto" class="control-label"></label>
-				<input asp-for="Temperatura_de_Projeto" class="form-control" />
+				<input asp-for="Temperatura_de_Projeto" class="form-control" value="105" />
 				<span asp-validation-for="Temperatura_de_Projeto" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Diametro_Interno" class="control-label"></label>
-				<input asp-for="Diametro_Interno" class="form-control" />
+				<input asp-for="Diametro_Interno" class="form-control" value="3150" />
 				<span asp-validation-for="Diametro_Interno" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Comprimento_Entre_Tangentes" class="control-label"></label>
-				<input asp-for="Comprimento_Entre_Tangentes" class="form-control" />
+				<input asp-for="Comprimento_Entre_Tangentes" class="form-control" value="9000" />
 				<span asp-validation-for="Comprimento_Entre_Tangentes" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Volume_Interno" class="control-label"></label>
-				<input asp-for="Volume_Interno" class="form-control" />
+				<input asp-for="Volume_Interno" class="form-control" value="78" />
 				<span asp-validation-for="Volume_Interno" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Sobrespessura_de_Corrosao" class="control-label"></label>
-				<input asp-for="Sobrespessura_de_Corrosao" class="form-control" />
+				<input asp-for="Sobrespessura_de_Corrosao" class="form-control" value="3" />
 				<span asp-validation-for="Sobrespessura_de_Corrosao" class="text-danger"></span>
 			</div>
 			@*<div class="form-group">
@@ -89,37 +92,37 @@
 			</div>
 			<div class="form-group">
 				<label asp-for="Gravidade_Especifica" class="control-label"></label>
-				<input asp-for="Gravidade_Especifica" class="form-control" />
+				<input asp-for="Gravidade_Especifica" class="form-control" value="1133" />
 				<span asp-validation-for="Gravidade_Especifica" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Teste_de_Pressao_Hidrostatica" class="control-label"></label>
-				<input asp-for="Teste_de_Pressao_Hidrostatica" class="form-control" />
+				<input asp-for="Teste_de_Pressao_Hidrostatica" class="form-control" value="3.8" />
 				<span asp-validation-for="Teste_de_Pressao_Hidrostatica" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Juntas_de_Topo" class="control-label"></label>
-				<input asp-for="Juntas_de_Topo" class="form-control" />
+				<input asp-for="Juntas_de_Topo" class="form-control" value="Tipo 1" />
 				<span asp-validation-for="Juntas_de_Topo" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Radiografia_do_Casco_e_Tampo" class="control-label"></label>
-				<input asp-for="Radiografia_do_Casco_e_Tampo" class="form-control" />
+				<input asp-for="Radiografia_do_Casco_e_Tampo" class="form-control" value="Total" />
 				<span asp-validation-for="Radiografia_do_Casco_e_Tampo" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Eficiencia_de_Junta_do_Costado" class="control-label"></label>
-				<input asp-for="Eficiencia_de_Junta_do_Costado" class="form-control" />
+				<input asp-for="Eficiencia_de_Junta_do_Costado" class="form-control" value="1" />
 				<span asp-validation-for="Eficiencia_de_Junta_do_Costado" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Eficiencia_de_Junta_dos_Tampos" class="control-label"></label>
-				<input asp-for="Eficiencia_de_Junta_dos_Tampos" class="form-control" />
+				<input asp-for="Eficiencia_de_Junta_dos_Tampos" class="form-control" value="1" />
 				<span asp-validation-for="Eficiencia_de_Junta_dos_Tampos" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Fator_do_Tampo_Eliptico" class="control-label"></label>
-				<input asp-for="Fator_do_Tampo_Eliptico" class="form-control" />
+				<input asp-for="Fator_do_Tampo_Eliptico" class="form-control" value="2" />
 				<span asp-validation-for="Fator_do_Tampo_Eliptico" class="text-danger"></span>
 			</div>
 			<div class="form-group">

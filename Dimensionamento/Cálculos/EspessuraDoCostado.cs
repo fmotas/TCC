@@ -29,9 +29,10 @@ namespace Dimensionamento.Cálculos
 		private static double getTensaoMaximaAdmissivel(DadosDeProjeto dados)
 		{
 			var range = getRange(dados.Temperatura_de_Projeto);
-			var specNo = dados.Materiais.Cascos_e_Tampos.Substring(0,6).TrimEnd();
+			var specNoEnd = dados.Materiais.Cascos_e_Tampos.IndexOf("Gr.");
+			var specNo = dados.Materiais.Cascos_e_Tampos.Substring(0, specNoEnd);
 			var grStart = dados.Materiais.Cascos_e_Tampos.LastIndexOf("Gr.")+3;
-			var typeOrGrade = dados.Materiais.Cascos_e_Tampos.Substring(grStart).TrimEnd();
+			var typeOrGrade = dados.Materiais.Cascos_e_Tampos.Substring(grStart);
 
 			var conn = new SqlConnection("Data Source = SQL5035.site4now.net; Initial Catalog = DB_A4111A_tccdimuff; User Id = DB_A4111A_tccdimuff_admin; Password = asdf1234; ");
 
