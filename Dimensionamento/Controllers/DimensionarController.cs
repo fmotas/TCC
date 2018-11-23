@@ -1,11 +1,10 @@
-﻿using Dimensionamento.Cálculos;
-using Dimensionamento.Entities;
+﻿using Dimensionamento.Entities;
+using Dimensionamento.Entities.Costado;
 using Dimensionamento.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Options;
-using System;
 using System.Diagnostics;
 
 namespace Dimensionamento.Controllers
@@ -26,7 +25,7 @@ namespace Dimensionamento.Controllers
 				(
 					new Fluidos(_dbConfig).getFluidos(),
 					"Text",
-					"Value"
+					"Value"					
 				);
 
 			ViewBag.Materiais = new SelectList
@@ -51,51 +50,21 @@ namespace Dimensionamento.Controllers
 			dados.Materiais = new Entities.Materiais();
 			dados.Materiais.Cascos_e_Tampos = Materiais;
 
-			var textoInformativo = TextoInformativo(dados);
+			var fullView = BuildInfo(dados);
 
-			return Content(textoInformativo);
+			ViewData["fullView"] = fullView;
+
+			return View("CostadoFullView", fullView);
 		}
 
-		public static string TextoInformativo(DadosDeProjeto dados)
+		public static CostadoFullView BuildInfo(DadosDeProjeto dados)
 		{
-			var resultadoSemSobrespessuradeCorrosao =
-				EspessuraDoCostado.ResultadoSemSobrespessuraDeCorrosao(dados);
-			var resultadoComSobrespessuradeCorrosao =
-				EspessuraDoCostado.ResultadoComSobrespessuraDeCorrosao(dados);
-			var resultadoGrupodePotencialdeRisco = CalculosGerais.getGrupoPotencialdeRisco(dados);
-			var resultadoClassedeFluido = CalculosGerais.getClassedeFluido(dados);
-			var resultadoCategoriadeFluido = CalculosGerais.getCategoriadoVaso(dados);
+			var inputs = new CostadoInputs(dados);
+			var outputs = new CostadoOutputs(dados);
 
-			var textoResultadoSemSobrespessuradeCorrosao =
-				$"{resultadoSemSobrespessuradeCorrosao}mm sem sobrespessura de corrosão.";
-			var textoResultadoComSobrespessuradeCorrosao =
-				$"{resultadoComSobrespessuradeCorrosao}mm com sobrespessura de corrosão.";
+			var fullView = new CostadoFullView(inputs, outputs);
 
-			var textoResultadoGrupodePotencialdeRisco = $"O vaso que está sendo dimensionado neste trabalho, é classificado na Categoria {resultadoCategoriadeFluido}, grupo {resultadoGrupodePotencialdeRisco} e classe {resultadoClassedeFluido}";
-
-			var textoInformativo = $"Usando os dados:" +
-								   Environment.NewLine +
-								   $"Pressão Interna de Projeto = {dados.Pressao_Interna_de_Projeto} MPa," +
-								   Environment.NewLine +
-								   $"Diâmetro Interno = {dados.Diametro_Interno} mm," +
-								   Environment.NewLine +
-								   $"Máxima Tensão Admissível = {dados.} MPa," +
-								   Environment.NewLine +
-								   $"Coeficiente de Eficiência de Solda = {dados.Eficiencia_de_Junta_do_Costado}," +
-								   Environment.NewLine +
-								   $"Sobrespessura de Corrosão = {dados.Sobrespessura_de_Corrosao} mm" +
-								   Environment.NewLine +
-								   Environment.NewLine +
-								   Environment.NewLine +
-								   Environment.NewLine +
-								   $"Obtivemos os seguintes resultados:" +
-								   Environment.NewLine +
-								   textoResultadoGrupodePotencialdeRisco +
-								   Environment.NewLine +
-								   textoResultadoSemSobrespessuradeCorrosao +
-								   Environment.NewLine +
-								   textoResultadoComSobrespessuradeCorrosao;
-			return textoInformativo;
+			return fullView;
 		}
 
 		public IActionResult Error()
