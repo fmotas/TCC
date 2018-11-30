@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dimensionamento.Entities.Costado
 {
-	public class CostadoInputs
+	public class DadosInputs
     {
 		[Display(Name = "Pressão Interna de Projeto(MPa)")]
 		public double Pressao_Interna_de_Projeto { get; set; }
@@ -17,16 +17,16 @@ namespace Dimensionamento.Entities.Costado
 		public double Sobrespessura_de_Corrosao { get; set; }
 
 
-		public CostadoInputs(DadosDeProjeto dados)
+		public DadosInputs(DadosDeProjeto dados)
 		{
 			Pressao_Interna_de_Projeto = dados.Pressao_Interna_de_Projeto;
 			Diametro_Interno = dados.Diametro_Interno;
-			Maxima_Tensao_Admissivel = EspessuraDoCostado.getTensaoMaximaAdmissivel(dados);
+			Maxima_Tensao_Admissivel = dados.Maxima_Tensao_Admissivel;
 			Eficiencia_de_Junta_do_Costado = dados.Eficiencia_de_Junta_do_Costado;
 			Sobrespessura_de_Corrosao = dados.Sobrespessura_de_Corrosao;
 		}
 
-		public CostadoInputs(CostadoInputs inputs)
+		public DadosInputs(DadosInputs inputs)
 		{
 			Pressao_Interna_de_Projeto = inputs.Pressao_Interna_de_Projeto;
 			Diametro_Interno = inputs.Diametro_Interno;

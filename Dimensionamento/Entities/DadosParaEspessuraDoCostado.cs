@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Dimensionamento.Entities
 {
-    public class DadosParaEspessuraDoCostado
+	public class DadosParaEspessuraDoCostado : DadosParaEspessuraDosTampos
 	{
-		[Display(Name = "Tipo De Casco ou Costado",AutoGenerateField = true)]
+		[Display(Name = "Tipo De Casco ou Costado", AutoGenerateField = true)]
 		public string Tipo_de_Casco_ou_Costado { get; set; }
 		[Display(Name = "Tipo de Tampo")]
 		public string Tipo_de_Tampo { get; set; }
@@ -50,7 +50,7 @@ namespace Dimensionamento.Entities
 		public double Eficiencia_de_Junta_do_Costado { get; set; }
 		[Display(Name = "Eficiência de Junta dos Tampos")]
 		public double Eficiencia_de_Junta_dos_Tampos { get; set; }
-		[Display(Name = "Fator do Tampo Elíptico")]
-		public double Fator_do_Tampo_Eliptico { get; set; }
+		[Display(Name = "Espessura do Costado")]
+		public double Espessura_do_Costado { get; set; }
 	}
 }

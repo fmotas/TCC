@@ -1,4 +1,4 @@
-﻿@model Dimensionamento.Entities.Costado.CostadoFullView
+﻿@model Dimensionamento.Entities.Costado.DadosFullView
 
 @{
 	ViewData["Title"] = "View1";
@@ -10,31 +10,31 @@
 	<hr />
 	<h4>Inputs</h4>
 	<dl class="dl-horizontal">
-		<dt style = "width:350px; text-align: left">
+		<dt style = "width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Inputs.Pressao_Interna_de_Projeto)
 		</dt>
 		<dd style = "margin-left: 180px;">
 			@Html.DisplayFor(model => model.Inputs.Pressao_Interna_de_Projeto)
 		</dd>
-		<dt style = "width:350px; text-align: left">
+		<dt style = "width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Inputs.Diametro_Interno)
 		</dt>
 		<dd style = "margin-left: 180px;">
 			@Html.DisplayFor(model => model.Inputs.Diametro_Interno)
 		</dd>
-		<dt style = "width:350px; text-align: left">
+		<dt style = "width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Inputs.Maxima_Tensao_Admissivel)
 		</dt>
 		<dd style = "margin-left: 180px;">
 			@Html.DisplayFor(model => model.Inputs.Maxima_Tensao_Admissivel)
 		</dd>
-		<dt style = "width:350px; text-align: left">
+		<dt style = "width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Inputs.Eficiencia_de_Junta_do_Costado)
 		</dt>
 		<dd style = "margin-left: 180px;">
 			@Html.DisplayFor(model => model.Inputs.Eficiencia_de_Junta_do_Costado)
 		</dd>
-		<dt style = "width:350px; text-align: left">
+		<dt style = "width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Inputs.Sobrespessura_de_Corrosao)
 		</dt>
 		<dd style = "margin-left: 180px;">
@@ -43,35 +43,47 @@
 	</dl>
 	<h4>Outputs</h4>
 	<dl class="dl-horizontal">
-		<dt style = "width:350px; text-align: left">
+		<dt style="width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Outputs.Classificacao_NR_13.Categoria)
 		</dt>
-		<dd style = "margin-left: 180px;">
+		<dd style="margin-left: 180px;">
 			@Html.DisplayFor(model => model.Outputs.Classificacao_NR_13.Categoria)
 		</dd>
-		<dt style = "width:350px; text-align: left">
+		<dt style="width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Outputs.Classificacao_NR_13.Grupo)
 		</dt>
-		<dd style = "margin-left: 180px;">
+		<dd style="margin-left: 180px;">
 			@Html.DisplayFor(model => model.Outputs.Classificacao_NR_13.Grupo)
 		</dd>
-		<dt style = "width:350px; text-align: left">
+		<dt style="width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Outputs.Classificacao_NR_13.Classe)
 		</dt>
-		<dd style = "margin-left: 180px;">
+		<dd style="margin-left: 180px;">
 			@Html.DisplayFor(model => model.Outputs.Classificacao_NR_13.Classe)
 		</dd>
-		<dt style = "width:350px; text-align: left">
-			@Html.DisplayNameFor(model => model.Outputs.Espessura_sem_sobrespessura_de_corrosao)
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_do_costado_sem_sobrespessura_de_corrosao)
 		</dt>
-		<dd style = "margin-left: 180px;">
-			@Html.DisplayFor(model => model.Outputs.Espessura_sem_sobrespessura_de_corrosao)
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_do_costado_sem_sobrespessura_de_corrosao)
 		</dd>
-		<dt style = "width:350px; text-align: left">
-			@Html.DisplayNameFor(model => model.Outputs.Espessura_com_sobrespessura_de_corrosao)
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_do_costado_com_sobrespessura_de_corrosao)
 		</dt>
-		<dd style = "margin-left: 180px;">
-			@Html.DisplayFor(model => model.Outputs.Espessura_com_sobrespessura_de_corrosao)
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_do_costado_com_sobrespessura_de_corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Pressao_interna_maxima_admissivel_dos_tampos)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Pressao_interna_maxima_admissivel_dos_tampos)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_dos_tampos_com_sobrespessura_de_corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_dos_tampos_com_sobrespessura_de_corrosao)
 		</dd>
 	</dl>
 </div>

@@ -18,14 +18,10 @@
 			</div>
 			<div class="form-group">
 				<label asp-for="Materiais" class="control-label"></label>
-				@*<label asp-for="Fluido" class="control-label"></label>
-					<span asp-validation-for="Fluido" class="text-danger"></span>
-					@Html.DropDownList("Fluidos", null, new { @class = "form-control" })*@
-				@*<input asp-for="Materiais.Cascos_e_Tampos" class="form-control" value="SA-516 Gr.70"/>*@
 				@Html.DropDownList(
-			   "Materiais",
-			   null,
-			   new { @class = "form-control" })
+							 "Materiais",
+							 null,
+							 new { @class = "form-control" })
 				<span asp-validation-for="Materiais.Cascos_e_Tampos" class="text-danger"></span>
 			</div>
 			<div class="form-group">
@@ -83,16 +79,19 @@
 				<input asp-for="Sobrespessura_de_Corrosao" class="form-control" value="3" />
 				<span asp-validation-for="Sobrespessura_de_Corrosao" class="text-danger"></span>
 			</div>
-			@*<div class="form-group">
-					<label asp-for="Fluido" class="control-label"></label>
-					<input asp-for="Fluido" class="form-control" />
-					<span asp-validation-for="Fluido" class="text-danger"></span>
-				</div>*@
 			<div class="form-group">
 				<label asp-for="Fluido" class="control-label"></label>
+				@Html.DropDownList(
+							 "Fluido",
+							 null,
+							 new { @class = "form-control" })
 				<span asp-validation-for="Fluido" class="text-danger"></span>
-				@Html.DropDownList("Fluidos", null, new { @class = "form-control" })
 			</div>
+			@*<div class="form-group">
+			<label asp-for="Fluido" class="control-label"></label>
+			<span asp-validation-for="Fluido" class="text-danger"></span>
+			@Html.DropDownList("Fluidos", null, new { @class = "form-control" })
+		</div>*@
 			<div class="form-group">
 				<label asp-for="Gravidade_Especifica" class="control-label"></label>
 				<input asp-for="Gravidade_Especifica" class="form-control" value="1133" />
@@ -129,6 +128,16 @@
 				<span asp-validation-for="Fator_do_Tampo_Eliptico" class="text-danger"></span>
 			</div>
 			<div class="form-group">
+				<label asp-for="Modulo_de_Elasticidade_a_Temperatura_Maxima_de_Projeto" class="control-label"></label>
+				<input asp-for="Modulo_de_Elasticidade_a_Temperatura_Maxima_de_Projeto" class="form-control" value="197852.64" />
+				<span asp-validation-for="Modulo_de_Elasticidade_a_Temperatura_Maxima_de_Projeto" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Tensao_de_Escoamento_do_Material_a_Temperatura_de_Projeto" class="control-label"></label>
+				<input asp-for="Tensao_de_Escoamento_do_Material_a_Temperatura_de_Projeto" class="form-control" value="260.62" />
+				<span asp-validation-for="Tensao_de_Escoamento_do_Material_a_Temperatura_de_Projeto" class="text-danger"></span>
+			</div>
+			<div class="form-group">
 				<input type="submit" value="Calcular" class="btn btn-default" />
 			</div>
 		</form>
@@ -139,5 +148,5 @@
 </div>
 
 @section Scripts {
-		@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-	}
+	@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

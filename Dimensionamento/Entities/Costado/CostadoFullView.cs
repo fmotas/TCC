@@ -1,14 +1,14 @@
 ﻿namespace Dimensionamento.Entities.Costado
 {
-	public class CostadoFullView
+	public class DadosFullView
     {		
-		public CostadoInputs Inputs { get; set; }
-		public CostadoOutputs Outputs { get; set; }
+		public DadosInputs Inputs { get; set; }
+		public DadosOutputs Outputs { get; set; }
 
-		public CostadoFullView(CostadoInputs inputs, CostadoOutputs outputs)
+		public DadosFullView(DadosInputs inputs, DadosOutputs outputs)
 		{
-			Inputs = new CostadoInputs(inputs);
-			Outputs = new CostadoOutputs(outputs);
+			Inputs = new DadosInputs(inputs);
+			Outputs = new DadosOutputs(outputs);
 		}
 	}
 }

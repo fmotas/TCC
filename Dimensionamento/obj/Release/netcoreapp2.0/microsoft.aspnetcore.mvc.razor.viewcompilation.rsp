@@ -3,7 +3,10 @@ D:\Repository\New folder\TCC\Dimensionamento
 --application-name=Dimensionamento
 --content-root=D:\Repository\New folder\TCC\Dimensionamento
 --file=D:\Repository\New folder\TCC\Dimensionamento\Views\Dimensionar\Contact.cshtml
+--file=D:\Repository\New folder\TCC\Dimensionamento\Views\Dimensionar\CostadoFullView.cshtml
 --file=D:\Repository\New folder\TCC\Dimensionamento\Views\Dimensionar\DadosDeProjeto.cshtml
+--file=D:\Repository\New folder\TCC\Dimensionamento\Views\Dimensionar\View.cshtml
+--file=D:\Repository\New folder\TCC\Dimensionamento\Views\Dimensionar\View1.cshtml
 --file=D:\Repository\New folder\TCC\Dimensionamento\Views\Shared\Error.cshtml
 --file=D:\Repository\New folder\TCC\Dimensionamento\Views\Shared\_Layout.cshtml
 --file=D:\Repository\New folder\TCC\Dimensionamento\Views\Shared\_ValidationScriptsPartial.cshtml

@@ -1,4 +1,5 @@
-﻿using Dimensionamento.Entities;
+﻿using Dimensionamento.Cálculos;
+using Dimensionamento.Entities;
 using Dimensionamento.Entities.Costado;
 using Dimensionamento.Models;
 using Microsoft.AspNetCore.Http;
@@ -21,7 +22,7 @@ namespace Dimensionamento.Controllers
 		[HttpGet]
 		public IActionResult DadosDeProjeto()
 		{
-			ViewBag.Fluidos = new SelectList
+			ViewBag.Fluido = new SelectList
 				(
 					new Fluidos(_dbConfig).getFluidos(),
 					"Text",
@@ -54,15 +55,16 @@ namespace Dimensionamento.Controllers
 
 			ViewData["fullView"] = fullView;
 
-			return View("CostadoFullView", fullView);
+			return View("DadosFullView", fullView);
 		}
 
-		public static CostadoFullView BuildInfo(DadosDeProjeto dados)
+		public static DadosFullView BuildInfo(DadosDeProjeto dados)
 		{
-			var inputs = new CostadoInputs(dados);
-			var outputs = new CostadoOutputs(dados);
+			dados.Maxima_Tensao_Admissivel = EspessuraDoCostado.getTensaoMaximaAdmissivel(dados);
+			var inputs = new DadosInputs(dados);
+			var outputs = new DadosOutputs(dados);
 
-			var fullView = new CostadoFullView(inputs, outputs);
+			var fullView = new DadosFullView(inputs, outputs);
 
 			return fullView;
 		}
