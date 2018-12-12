@@ -14,6 +14,7 @@ D:\Repository\New folder\TCC\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionam
 D:\Repository\New folder\TCC\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.runtimeconfig.dev.json
 D:\Repository\New folder\TCC\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.dll
 D:\Repository\New folder\TCC\Dimensionamento\bin\Debug\netcoreapp2.0\Dimensionamento.pdb
+D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.csprojResolveAssemblyReference.cache
 D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.csproj.CoreCompileInputs.cache
 D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.AssemblyInfoInputs.cache
 D:\Repository\New folder\TCC\Dimensionamento\obj\Debug\netcoreapp2.0\Dimensionamento.AssemblyInfo.cs

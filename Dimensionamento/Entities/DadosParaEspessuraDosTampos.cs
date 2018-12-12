@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Dimensionamento.Entities
 {
-    public class DadosParaEspessuraDosTampos
-    {
+    public class DadosParaEspessuraDosTampos : DadosParaEspessuraDosBocais
+	{
 		[Display(Name = "Fator de Junta Soldada")]
 		public double Fator_de_Junta_Soldada { get; set; }
 		[Display(Name = "Máxima Tensão Admissível(Mpa)")]

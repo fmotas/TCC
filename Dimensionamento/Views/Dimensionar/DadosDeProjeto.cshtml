@@ -17,9 +17,9 @@
 				<span asp-validation-for="Tipo_de_Casco_ou_Costado" class="text-danger"></span>
 			</div>
 			<div class="form-group">
-				<label asp-for="Materiais" class="control-label"></label>
+				<label asp-for="Materiais.Cascos_e_Tampos" class="control-label"></label>
 				@Html.DropDownList(
-							 "Materiais",
+							 "MateriaisDotCascos_e_Tampos",
 							 null,
 							 new { @class = "form-control" })
 				<span asp-validation-for="Materiais.Cascos_e_Tampos" class="text-danger"></span>

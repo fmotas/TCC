@@ -29,11 +29,12 @@ namespace Dimensionamento.Controllers
 					"Value"					
 				);
 
-			ViewBag.Materiais = new SelectList
+			ViewBag.MateriaisDotCascos_e_Tampos = new SelectList
 				(
-					new Models.Materiais(_dbConfig).getMateriais(),
+					new Models.Materiais(_dbConfig).getSpecificProductFormMateriais("Plate                                             "),
 					"Text",
-					"Value"
+					"Value",
+					"SA-516                                            Gr.70                                                "
 				);
 
 			return View();
@@ -46,10 +47,12 @@ namespace Dimensionamento.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult DadosDeProjeto(DadosDeProjeto dados, string Materiais)
+		public IActionResult DadosDeProjeto(DadosDeProjeto dados, string MateriaisDotCascos_e_Tampos, string Fluido)
 		{
 			dados.Materiais = new Entities.Materiais();
-			dados.Materiais.Cascos_e_Tampos = Materiais;
+			dados.Materiais.Cascos_e_Tampos = MateriaisDotCascos_e_Tampos;
+
+			dados.Fluido = Fluido;
 
 			var fullView = BuildInfo(dados);
 

@@ -23,21 +23,45 @@ namespace Dimensionamento.Models
 			_dbConfig = dbConfig;
 		}
 
-		public IEnumerable<Materiais> getMateriais()
+		public IEnumerable<Materiais> getSpecificProductFormMateriais(string productForm)
 		{
 			var context = new DimensionamentoContext(_dbConfig);
 
 			var Materiais = context.ParteD5A2010Pg5450.ToList();
 
-			foreach (var materiais in Materiais)
+			foreach (var material in Materiais)
 			{
 				var typeOrGrade = "";
 
-				if (!string.IsNullOrEmpty(materiais.TypeOrGrade))
+				if (!string.IsNullOrEmpty(material.TypeOrGrade))
 				{
-					typeOrGrade = "Gr." + materiais.TypeOrGrade;
+					typeOrGrade = "Gr." + material.TypeOrGrade;
 				}
-				yield return new Materiais(materiais.SpecNo + typeOrGrade);
+				if (material.ProductForm == productForm)
+				{
+					yield return new Materiais(material.SpecNo + typeOrGrade);
+				}
+			}
+		}
+
+		public IEnumerable<Materiais> getSpecificProductFormsMateriais(string productForm1, string productForm2)
+		{
+			var context = new DimensionamentoContext(_dbConfig);
+
+			var Materiais = context.ParteD5A2010Pg5450.ToList();
+
+			foreach (var material in Materiais)
+			{
+				var typeOrGrade = "";
+
+				if (!string.IsNullOrEmpty(material.TypeOrGrade))
+				{
+					typeOrGrade = "Gr." + material.TypeOrGrade;
+				}
+				if (material.ProductForm == productForm1 || material.ProductForm == productForm2)
+				{
+					yield return new Materiais(material.SpecNo + typeOrGrade);
+				}
 			}
 		}
 	}
