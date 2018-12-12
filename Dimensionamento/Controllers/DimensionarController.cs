@@ -31,11 +31,31 @@ namespace Dimensionamento.Controllers
 
 			ViewBag.MateriaisDotCascos_e_Tampos = new SelectList
 				(
-					new Models.Materiais(_dbConfig).getSpecificProductFormMateriais("Plate                                             "),
+					new Models.Materiais(_dbConfig).getSpecificProductFormMateriais(
+						"Plate                                             "),
 					"Text",
 					"Value",
 					"SA-516                                            Gr.70                                                "
 				);
+			ViewBag.MateriaisDotBocaisDefault105 = new SelectList
+				(
+					new Models.Materiais(_dbConfig).getSpecificProductFormsMateriais(
+						"Forgings                                          ",
+						"Smls.pipe                                         "),
+					"Text",
+					"Value",
+					"SA-516                                            Gr.70                                                "
+				);
+			ViewBag.MateriaisDotBocaisDefault106GrB = new SelectList
+				(
+					new Models.Materiais(_dbConfig).getSpecificProductFormsMateriais(
+						"Forgings                                          ",
+						"Smls.pipe                                         "),
+					"Text",
+					"Value",
+					"SA-516                                            Gr.70                                                "
+				);
+
 
 			return View();
 		}
