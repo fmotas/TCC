@@ -105,7 +105,7 @@ namespace Dimensionamento.Cálculos
 			{
 				specNo = material.Substring(0, specNoEnd);
 				var grStart = material.LastIndexOf("Gr.") + 3;
-				typeOrGrade = "AND TYPEORGRADE = " + material.Substring(grStart);
+				typeOrGrade = "AND TYPEORGRADE = '" + material.Substring(grStart) + "'";
 			}
 			else
 			{
@@ -126,8 +126,8 @@ namespace Dimensionamento.Cálculos
 			}
 			if (parte == "Bocal")
 			{
-				db1 = "Parte_D_5-A_2010_PG5446";
-				db2 = "Parte_D_5-A_2010_PG5448";
+				db1 = "Parte_D_5-A_2010_PG5448";
+				db2 = "Parte_D_5-A_2010_PG5446";
 			}
 
 			var query = $@"

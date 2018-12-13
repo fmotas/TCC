@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Options;
+using System;
 using System.Diagnostics;
 
 namespace Dimensionamento.Controllers
@@ -125,11 +126,26 @@ namespace Dimensionamento.Controllers
 		{
 			FullFillValuesFromDropDownLists(dados, MateriaisDotCascos_e_Tampos, Fluido, MateriaisDotBocal_de_Entrada_de_Fluido, MateriaisDotBocal_de_Saida_de_Gas, MateriaisDotBocal_de_Valvula_de_Seguranca, MateriaisDotBocal_de_Saida_de_Agua, MateriaisDotBocal_de_Saida_de_Oleo, MateriaisDotDreno, MateriaisDotRespiradouro, MateriaisDotBocas_de_Visita);
 
+			DimensionarBocais(dados);
+
 			var fullView = BuildInfo(dados);
 
 			ViewData["fullView"] = fullView;
 
 			return View("DadosFullView", fullView);
+		}
+
+		private void DimensionarBocais(DadosDeProjeto dados)
+		{
+			EspessuraDosBocais.SetEspessuraDoBocal(dados.Bocal_de_Entrada_de_Fluido, dados);
+			EspessuraDosBocais.SetEspessuraDoBocal(dados.Bocal_de_Saida_de_Agua, dados);
+			EspessuraDosBocais.SetEspessuraDoBocal(dados.Bocal_de_Saida_de_Gas, dados);
+			EspessuraDosBocais.SetEspessuraDoBocal(dados.Bocal_de_Saida_de_Oleo, dados);
+			EspessuraDosBocais.SetEspessuraDoBocal(dados.Bocal_de_Valvula_de_Seguranca, dados);
+			EspessuraDosBocais.SetEspessuraDoBocal(dados.Bocas_de_Visita, dados);
+			EspessuraDosBocais.SetEspessuraDoBocal(dados.Dreno, dados);
+			EspessuraDosBocais.SetEspessuraDoBocal(dados.Respiradouro, dados);
+			EspessuraDosBocais.SetEspessuraDoBocal(dados.Bocas_de_Visita, dados);
 		}
 
 		private static void FullFillValuesFromDropDownLists(DadosDeProjeto dados, string MateriaisDotCascos_e_Tampos, string Fluido, string MateriaisDotBocal_de_Entrada_de_Fluido, string MateriaisDotBocal_de_Saida_de_Gas, string MateriaisDotBocal_de_Valvula_de_Seguranca, string MateriaisDotBocal_de_Saida_de_Agua, string MateriaisDotBocal_de_Saida_de_Oleo, string MateriaisDotDreno, string MateriaisDotRespiradouro, string MateriaisDotBocas_de_Visita)

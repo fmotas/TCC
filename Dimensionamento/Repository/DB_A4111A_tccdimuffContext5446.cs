@@ -32,7 +32,7 @@ namespace Dimensionamento.Models
         {
             modelBuilder.Entity<ParteD5A2010Pg5446>(entity =>
             {
-                entity.ToTable("Parte_D_5_A_2010_PG5446");
+                entity.ToTable("Parte_D_5-A_2010_PG5446");
 
                 entity.Property(e => e.AlloyDesignationOrUnsno)
                     .HasColumnName("AlloyDesignationOrUNSNo")
