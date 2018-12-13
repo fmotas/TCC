@@ -121,7 +121,18 @@ namespace Dimensionamento.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult DadosDeProjeto(DadosDeProjeto dados, string MateriaisDotCascos_e_Tampos, string Fluido)
+		public IActionResult DadosDeProjeto(DadosDeProjeto dados, string MateriaisDotCascos_e_Tampos, string Fluido, string MateriaisDotBocal_de_Entrada_de_Fluido, string MateriaisDotBocal_de_Saida_de_Gas, string MateriaisDotBocal_de_Valvula_de_Seguranca, string MateriaisDotBocal_de_Saida_de_Agua, string MateriaisDotBocal_de_Saida_de_Oleo, string MateriaisDotDreno, string MateriaisDotRespiradouro, string MateriaisDotBocas_de_Visita)
+		{
+			FullFillValuesFromDropDownLists(dados, MateriaisDotCascos_e_Tampos, Fluido, MateriaisDotBocal_de_Entrada_de_Fluido, MateriaisDotBocal_de_Saida_de_Gas, MateriaisDotBocal_de_Valvula_de_Seguranca, MateriaisDotBocal_de_Saida_de_Agua, MateriaisDotBocal_de_Saida_de_Oleo, MateriaisDotDreno, MateriaisDotRespiradouro, MateriaisDotBocas_de_Visita);
+
+			var fullView = BuildInfo(dados);
+
+			ViewData["fullView"] = fullView;
+
+			return View("DadosFullView", fullView);
+		}
+
+		private static void FullFillValuesFromDropDownLists(DadosDeProjeto dados, string MateriaisDotCascos_e_Tampos, string Fluido, string MateriaisDotBocal_de_Entrada_de_Fluido, string MateriaisDotBocal_de_Saida_de_Gas, string MateriaisDotBocal_de_Valvula_de_Seguranca, string MateriaisDotBocal_de_Saida_de_Agua, string MateriaisDotBocal_de_Saida_de_Oleo, string MateriaisDotDreno, string MateriaisDotRespiradouro, string MateriaisDotBocas_de_Visita)
 		{
 			dados.Materiais = new Entities.Materiais
 			{
@@ -130,11 +141,14 @@ namespace Dimensionamento.Controllers
 
 			dados.Fluido = Fluido;
 
-			var fullView = BuildInfo(dados);
-
-			ViewData["fullView"] = fullView;
-
-			return View("DadosFullView", fullView);
+			dados.Bocal_de_Entrada_de_Fluido.Material = MateriaisDotBocal_de_Entrada_de_Fluido;
+			dados.Bocal_de_Saida_de_Gas.Material = MateriaisDotBocal_de_Saida_de_Gas;
+			dados.Bocal_de_Valvula_de_Seguranca.Material = MateriaisDotBocal_de_Valvula_de_Seguranca;
+			dados.Bocal_de_Saida_de_Agua.Material = MateriaisDotBocal_de_Saida_de_Agua;
+			dados.Bocal_de_Saida_de_Oleo.Material = MateriaisDotBocal_de_Saida_de_Oleo;
+			dados.Dreno.Material = MateriaisDotDreno;
+			dados.Respiradouro.Material = MateriaisDotRespiradouro;
+			dados.Bocas_de_Visita.Material = MateriaisDotBocas_de_Visita;
 		}
 
 		public static DadosFullView BuildInfo(DadosDeProjeto dados)

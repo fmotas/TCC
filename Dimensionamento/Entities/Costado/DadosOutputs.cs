@@ -45,13 +45,13 @@ namespace Dimensionamento.Entities.Costado
 			Espessura_do_costado_com_sobrespessura_de_corrosao = EspessuraDoCostado.ResultadoComSobrespessuraDeCorrosao(dados);
 			dados.Espessura_do_Costado = Espessura_do_costado_com_sobrespessura_de_corrosao;
 
-			var dimensionamentoDosTampos = verificarPaDosTampos(dados);
+			var dimensionamentoDosTampos = VerificarPaDosTampos(dados);
 			Espessura_dos_tampos_sem_sobrespessura_de_corrosao = dimensionamentoDosTampos.EspessuraDosTampos - dados.Sobrespessura_de_Corrosao;
 			Espessura_dos_tampos_com_sobrespessura_de_corrosao = dimensionamentoDosTampos.EspessuraDosTampos;
 			Pressao_interna_maxima_admissivel_dos_tampos = dimensionamentoDosTampos.Pa;
 		}
 
-		private DimensionamentoDosTampos verificarPaDosTampos(DadosDeProjeto dados)
+		private DimensionamentoDosTampos VerificarPaDosTampos(DadosDeProjeto dados)
 		{
 			var dimensionamentoDosTampos = new DimensionamentoDosTampos(dados);
 
@@ -62,7 +62,7 @@ namespace Dimensionamento.Entities.Costado
 			else
 			{
 				dados.Espessura_do_Costado += 1;
-				return verificarPaDosTampos(dados);
+				return VerificarPaDosTampos(dados);
 			}
 		}
 
