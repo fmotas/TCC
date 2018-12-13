@@ -31,29 +31,83 @@ namespace Dimensionamento.Controllers
 
 			ViewBag.MateriaisDotCascos_e_Tampos = new SelectList
 				(
-					new Models.Materiais(_dbConfig).getSpecificProductFormMateriais(
+					new Models.Materiais(_dbConfig).GetSpecificProductFormMateriais(
 						"Plate                                             "),
 					"Text",
 					"Value",
 					"SA-516                                            Gr.70                                                "
 				);
-			ViewBag.MateriaisDotBocaisDefault105 = new SelectList
+			ViewBag.MateriaisDotBocal_de_Entrada_de_Fluido = new SelectList
 				(
-					new Models.Materiais(_dbConfig).getSpecificProductFormsMateriais(
+					new Models.Materiais(_dbConfig).GetSpecificProductFormsMateriais(
 						"Forgings                                          ",
 						"Smls. pipe                                        "),
 					"Text",
 					"Value",
 					"SA-105                                            "
 				);
-			ViewBag.MateriaisDotBocaisDefault106GrB = new SelectList
+			ViewBag.MateriaisDotBocal_de_Saida_de_Gas = new SelectList
 				(
-					new Models.Materiais(_dbConfig).getSpecificProductFormsMateriais(
+					new Models.Materiais(_dbConfig).GetSpecificProductFormsMateriais(
+						"Forgings                                          ",
+						"Smls. pipe                                        "),
+					"Text",
+					"Value",
+					"SA-105                                            "
+				);
+			ViewBag.MateriaisDotBocal_de_Valvula_de_Seguranca = new SelectList
+				(
+					new Models.Materiais(_dbConfig).GetSpecificProductFormsMateriais(
+						"Forgings                                          ",
+						"Smls. pipe                                        "),
+					"Text",
+					"Value",
+					"SA-105                                            "
+				);
+			ViewBag.MateriaisDotBocal_de_Saida_de_Agua = new SelectList
+				(
+					new Models.Materiais(_dbConfig).GetSpecificProductFormsMateriais(
 						"Forgings                                          ",
 						"Smls. pipe                                        "),
 					"Text",
 					"Value",
 					"SA-106                                            Gr.B                                                 "
+				);
+			ViewBag.MateriaisDotBocal_de_Saida_de_Oleo = new SelectList
+				(
+					new Models.Materiais(_dbConfig).GetSpecificProductFormsMateriais(
+						"Forgings                                          ",
+						"Smls. pipe                                        "),
+					"Text",
+					"Value",
+					"SA-106                                            Gr.B                                                 "
+				);
+			ViewBag.MateriaisDotDreno = new SelectList
+				(
+					new Models.Materiais(_dbConfig).GetSpecificProductFormsMateriais(
+						"Forgings                                          ",
+						"Smls. pipe                                        "),
+					"Text",
+					"Value",
+					"SA-106                                            Gr.B                                                 "
+				);
+			ViewBag.MateriaisDotRespiradouro = new SelectList
+				(
+					new Models.Materiais(_dbConfig).GetSpecificProductFormsMateriais(
+						"Forgings                                          ",
+						"Smls. pipe                                        "),
+					"Text",
+					"Value",
+					"SA-106                                            Gr.B                                                 "
+				);
+			ViewBag.MateriaisDotBocas_de_Visita = new SelectList
+				(
+					new Models.Materiais(_dbConfig).GetSpecificProductFormsMateriais(
+						"Forgings                                          ",
+						"Smls. pipe                                        "),
+					"Text",
+					"Value",
+					"SA-105                                            "
 				);
 
 

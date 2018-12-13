@@ -23,7 +23,7 @@ namespace Dimensionamento.Models
 			_dbConfig = dbConfig;
 		}
 
-		public IEnumerable<Materiais> getSpecificProductFormMateriais(string productForm)
+		public IEnumerable<Materiais> GetSpecificProductFormMateriais(string productForm)
 		{
 			var context = new DimensionamentoContext(_dbConfig);
 
@@ -44,7 +44,7 @@ namespace Dimensionamento.Models
 			}
 		}
 
-		public IEnumerable<Materiais> getSpecificProductFormsMateriais(string productForm1, string productForm2)
+		public IEnumerable<Materiais> GetSpecificProductFormsMateriais(string productForm1, string productForm2)
 		{
 			var context = new DB_A4111A_tccdimuffContext5446(_dbConfig);
 
