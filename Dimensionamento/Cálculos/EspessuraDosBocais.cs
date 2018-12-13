@@ -21,7 +21,7 @@ namespace Dimensionamento.Cálculos
 		{
 			var t2 = Table452.getMinimumThickness(DN);
 
-			bocal.t2 = Math.Round(t2 + C, 2);
+			bocal.t2 = t2 + C;
 		}
 
 		private static void Calculart1(Bocal bocal)
@@ -30,10 +30,10 @@ namespace Dimensionamento.Cálculos
 
 			if (t1 > bocal.t1_Sem_Sobrespessura_de_Corrosao)
 			{
-				bocal.t1_Sem_Sobrespessura_de_Corrosao = Math.Round(t1, 2);
+				bocal.t1_Sem_Sobrespessura_de_Corrosao = t1;
 			}
 
-			bocal.t1_Com_Sobrespessura_de_Corrosao = Math.Round(bocal.t1_Sem_Sobrespessura_de_Corrosao + C, 2);
+			bocal.t1_Com_Sobrespessura_de_Corrosao = bocal.t1_Sem_Sobrespessura_de_Corrosao + C;
 		}
 
 		private static void ConfigurarVariaveisBase(Bocal bocal, DadosDeProjeto dados)

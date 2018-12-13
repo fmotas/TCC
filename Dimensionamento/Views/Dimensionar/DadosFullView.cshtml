@@ -1,47 +1,14 @@
 ﻿@model Dimensionamento.Entities.Costado.DadosFullView
 
 @{
-	ViewData["Title"] = "View1";
+	ViewData["Title"] = "Resultados";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div>
-	<h2>Results</h2>
+	<h1>Resultados</h1>
 	<hr />
-	<h4>Inputs</h4>
-	<dl class="dl-horizontal">
-		<dt style = "width:420px; text-align: left">
-			@Html.DisplayNameFor(model => model.Inputs.Pressao_Interna_de_Projeto)
-		</dt>
-		<dd style = "margin-left: 180px;">
-			@Html.DisplayFor(model => model.Inputs.Pressao_Interna_de_Projeto)
-		</dd>
-		<dt style = "width:420px; text-align: left">
-			@Html.DisplayNameFor(model => model.Inputs.Diametro_Interno)
-		</dt>
-		<dd style = "margin-left: 180px;">
-			@Html.DisplayFor(model => model.Inputs.Diametro_Interno)
-		</dd>
-		<dt style = "width:420px; text-align: left">
-			@Html.DisplayNameFor(model => model.Inputs.Maxima_Tensao_Admissivel)
-		</dt>
-		<dd style = "margin-left: 180px;">
-			@Html.DisplayFor(model => model.Inputs.Maxima_Tensao_Admissivel)
-		</dd>
-		<dt style = "width:420px; text-align: left">
-			@Html.DisplayNameFor(model => model.Inputs.Eficiencia_de_Junta_do_Costado)
-		</dt>
-		<dd style = "margin-left: 180px;">
-			@Html.DisplayFor(model => model.Inputs.Eficiencia_de_Junta_do_Costado)
-		</dd>
-		<dt style = "width:420px; text-align: left">
-			@Html.DisplayNameFor(model => model.Inputs.Sobrespessura_de_Corrosao)
-		</dt>
-		<dd style = "margin-left: 180px;">
-			@Html.DisplayFor(model => model.Inputs.Sobrespessura_de_Corrosao)
-		</dd>
-	</dl>
-	<h4>Outputs</h4>
+	<h2>NR-13</h2>
 	<dl class="dl-horizontal">
 		<dt style="width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Outputs.Classificacao_NR_13.Categoria)
@@ -61,6 +28,10 @@
 		<dd style="margin-left: 180px;">
 			@Html.DisplayFor(model => model.Outputs.Classificacao_NR_13.Classe)
 		</dd>
+	</dl>
+	<hr />
+	<h2>Costado</h2>
+	<dl class="dl-horizontal">
 		<dt style="width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Outputs.Espessura_do_costado_sem_sobrespessura_de_corrosao)
 		</dt>
@@ -73,11 +44,21 @@
 		<dd style="margin-left: 180px;">
 			@Html.DisplayFor(model => model.Outputs.Espessura_do_costado_com_sobrespessura_de_corrosao)
 		</dd>
+	</dl>
+	<hr />
+	<h2>Tampos</h2>
+	<dl class="dl-horizontal">
 		<dt style="width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Outputs.Pressao_interna_maxima_admissivel_dos_tampos)
 		</dt>
 		<dd style="margin-left: 180px;">
 			@Html.DisplayFor(model => model.Outputs.Pressao_interna_maxima_admissivel_dos_tampos)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_dos_tampos_sem_sobrespessura_de_corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_dos_tampos_sem_sobrespessura_de_corrosao)
 		</dd>
 		<dt style="width:420px; text-align: left">
 			@Html.DisplayNameFor(model => model.Outputs.Espessura_dos_tampos_com_sobrespessura_de_corrosao)
@@ -86,7 +67,190 @@
 			@Html.DisplayFor(model => model.Outputs.Espessura_dos_tampos_com_sobrespessura_de_corrosao)
 		</dd>
 	</dl>
+	<hr />
+	<h2>Bocais</h2>
+	<br>
+	<h3>Bocal de Entrada de Fluido</h3>
+	<dl class="dl-horizontal">
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Entrada_de_Fluido_t1_Sem_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Entrada_de_Fluido_t1_Sem_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Entrada_de_Fluido_t1_Com_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Entrada_de_Fluido_t1_Com_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Entrada_de_Fluido_t2)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Entrada_de_Fluido_t2)
+		</dd>
+	</dl>
+	<br>
+	<h3>Bocal de Saída de Gás</h3>
+	<dl class="dl-horizontal">
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Gas_t1_Sem_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Gas_t1_Sem_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Gas_t1_Com_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Gas_t1_Com_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Gas_t2)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Gas_t2)
+		</dd>
+	</dl>
+	<br>
+	<h3>Bocal de Válvula de Seguranca</h3>
+	<dl class="dl-horizontal">
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Valvula_de_Seguranca_t1_Sem_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Valvula_de_Seguranca_t1_Sem_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Valvula_de_Seguranca_t1_Com_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Valvula_de_Seguranca_t1_Com_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Valvula_de_Seguranca_t2)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Valvula_de_Seguranca_t2)
+		</dd>
+	</dl>
+	<br>
+	<h3>Bocal de Saída de Água</h3>
+	<dl class="dl-horizontal">
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Agua_t2)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Agua_t2)
+		</dd>
+	</dl>
+	<br>
+	<h3>Bocal de Saida de Óleo</h3>
+	<dl class="dl-horizontal">
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Oleo_t2)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocal_de_Saida_de_Oleo_t2)
+		</dd>
+	</dl>
+	<br>
+	<h3>Dreno</h3>
+	<dl class="dl-horizontal">
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Dreno_t1_Sem_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Dreno_t1_Sem_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Dreno_t1_Com_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Dreno_t1_Com_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Dreno_t2)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Dreno_t2)
+		</dd>
+	</dl>
+	<br>
+	<h3>Respiradouro</h3>
+	<dl class="dl-horizontal">
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Respiradouro_t1_Sem_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Respiradouro_t1_Sem_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Respiradouro_t1_Com_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Respiradouro_t1_Com_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Respiradouro_t2)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Respiradouro_t2)
+		</dd>
+	</dl>
+	<br>
+	<h3>Bocas de Visita</h3>
+	<dl class="dl-horizontal">
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocas_de_Visita_t1_Sem_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocas_de_Visita_t1_Sem_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocas_de_Visita_t1_Com_Sobrespessura_de_Corrosao)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocas_de_Visita_t1_Com_Sobrespessura_de_Corrosao)
+		</dd>
+		<dt style="width:420px; text-align: left">
+			@Html.DisplayNameFor(model => model.Outputs.Espessura_Bocas_de_Visita_t2)
+		</dt>
+		<dd style="margin-left: 180px;">
+			@Html.DisplayFor(model => model.Outputs.Espessura_Bocas_de_Visita_t2)
+		</dd>
+	</dl>
 </div>
 <div>
+	<br>
+	<input type="submit" onclick="location.href='javascript:window.print()';" value="Imprimir Resultados" class="btn btn-primary mb1 bg-navy" />
+	<br>
+	<br>
+	<br>
 	<a asp-action="DadosDeProjeto">Voltar para o formulário inicial</a>
 </div>

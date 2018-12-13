@@ -11,7 +11,7 @@
 	<div class="col-md-4">
 		<form asp-action="DadosDeProjeto">
 			<h2>Casco e Tampos</h2>
-			<hr />
+			<br>
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<div class="form-group">
 				<label asp-for="Tipo_de_Casco_ou_Costado" class="control-label"></label>
@@ -26,9 +26,9 @@
 			<div class="form-group">
 				<label asp-for="Materiais.Cascos_e_Tampos" class="control-label"></label>
 				@Html.DropDownList(
-								"MateriaisDotCascos_e_Tampos",
-								null,
-								new { @class = "form-control" })
+	  "MateriaisDotCascos_e_Tampos",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Materiais.Cascos_e_Tampos" class="text-danger"></span>
 			</div>
 			<div class="form-group">
@@ -55,9 +55,9 @@
 			<div class="form-group">
 				<label asp-for="Fluido" class="control-label"></label>
 				@Html.DropDownList(
-								"Fluido",
-								null,
-								new { @class = "form-control" })
+	  "Fluido",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Fluido" class="text-danger"></span>
 			</div>
 			<div class="form-group">
@@ -120,187 +120,174 @@
 				<input asp-for="Juntas_de_Topo" class="form-control" value="Tipo 1" />
 				<span asp-validation-for="Juntas_de_Topo" class="text-danger"></span>
 			</div>
+			<hr />
 			<h2>Bocais</h2>
-			<hr />
+			<br>
 			<h3>Bocal de Entrada de Fluido</h3>
-			<hr />
 			<div class="form-group">
 				<label asp-for="Bocal_de_Entrada_de_Fluido.Material" class="control-label"></label>
 				@Html.DropDownList(
-								   "MateriaisDotBocal_de_Entrada_de_Fluido",
-								   null,
-								   new { @class = "form-control" })
+	  "MateriaisDotBocal_de_Entrada_de_Fluido",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Bocal_de_Entrada_de_Fluido.Material" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Entrada_de_Fluido.Diametro_Nominal" class="control-label"></label>
-				<input asp-for="Bocal_de_Entrada_de_Fluido.Diametro_Nominal" class="form-control" value="445.0"/>
+				<input asp-for="Bocal_de_Entrada_de_Fluido.Diametro_Nominal" class="form-control" value="445.0" />
 				<span asp-validation-for="Bocal_de_Entrada_de_Fluido.Diametro_Nominal" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Entrada_de_Fluido.Coeficiente_de_Eficiencia_de_Solda" class="control-label"></label>
-				<input asp-for="Bocal_de_Entrada_de_Fluido.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1"/>
+				<input asp-for="Bocal_de_Entrada_de_Fluido.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1" />
 				<span asp-validation-for="Bocal_de_Entrada_de_Fluido.Coeficiente_de_Eficiencia_de_Solda" class="text-danger"></span>
 			</div>
+			<br>
 			<h3>Bocal de Saída de Gás</h3>
-			<hr />
 			<div class="form-group">
 				<label asp-for="Bocal_de_Saida_de_Gas.Material" class="control-label"></label>
 				@Html.DropDownList(
-								   "MateriaisDotBocal_de_Saida_de_Gas",
-								   null,
-								   new { @class = "form-control" })
+	  "MateriaisDotBocal_de_Saida_de_Gas",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Bocal_de_Saida_de_Gas.Material" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Saida_de_Gas.Diametro_Nominal" class="control-label"></label>
-				<input asp-for="Bocal_de_Saida_de_Gas.Diametro_Nominal" class="form-control" value="394.2"/>
+				<input asp-for="Bocal_de_Saida_de_Gas.Diametro_Nominal" class="form-control" value="394.2" />
 				<span asp-validation-for="Bocal_de_Saida_de_Gas.Diametro_Nominal" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Saida_de_Gas.Coeficiente_de_Eficiencia_de_Solda" class="control-label"></label>
-				<input asp-for="Bocal_de_Saida_de_Gas.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1"/>
+				<input asp-for="Bocal_de_Saida_de_Gas.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1" />
 				<span asp-validation-for="Bocal_de_Saida_de_Gas.Coeficiente_de_Eficiencia_de_Solda" class="text-danger"></span>
 			</div>
+			<br>
 			<h3>Bocal de Válvula de Seguranca</h3>
-			<hr />
 			<div class="form-group">
 				<label asp-for="Bocal_de_Valvula_de_Seguranca.Material" class="control-label"></label>
 				@Html.DropDownList(
-								   "MateriaisDotBocal_de_Valvula_de_Seguranca",
-								   null,
-								   new { @class = "form-control" })
+	  "MateriaisDotBocal_de_Valvula_de_Seguranca",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Bocal_de_Valvula_de_Seguranca.Material" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Valvula_de_Seguranca.Diametro_Nominal" class="control-label"></label>
-				<input asp-for="Bocal_de_Valvula_de_Seguranca.Diametro_Nominal" class="form-control" value="394.2"/>
+				<input asp-for="Bocal_de_Valvula_de_Seguranca.Diametro_Nominal" class="form-control" value="394.2" />
 				<span asp-validation-for="Bocal_de_Valvula_de_Seguranca.Diametro_Nominal" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Valvula_de_Seguranca.Coeficiente_de_Eficiencia_de_Solda" class="control-label"></label>
-				<input asp-for="Bocal_de_Valvula_de_Seguranca.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1"/>
+				<input asp-for="Bocal_de_Valvula_de_Seguranca.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1" />
 				<span asp-validation-for="Bocal_de_Valvula_de_Seguranca.Coeficiente_de_Eficiencia_de_Solda" class="text-danger"></span>
 			</div>
+			<br>
 			<h3>Bocal de Saída de Água</h3>
-			<hr />
 			<div class="form-group">
 				<label asp-for="Bocal_de_Saida_de_Agua.Material" class="control-label"></label>
 				@Html.DropDownList(
-								   "MateriaisDotBocal_de_Saida_de_Agua",
-								   null,
-								   new { @class = "form-control" })
+	  "MateriaisDotBocal_de_Saida_de_Agua",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Bocal_de_Saida_de_Agua.Material" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Saida_de_Agua.Diametro_Nominal" class="control-label"></label>
-				<input asp-for="Bocal_de_Saida_de_Agua.Diametro_Nominal" class="form-control" value="250.0"/>
+				<input asp-for="Bocal_de_Saida_de_Agua.Diametro_Nominal" class="form-control" value="250.0" />
 				<span asp-validation-for="Bocal_de_Saida_de_Agua.Diametro_Nominal" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Saida_de_Agua.Coeficiente_de_Eficiencia_de_Solda" class="control-label"></label>
-				<input asp-for="Bocal_de_Saida_de_Agua.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1"/>
+				<input asp-for="Bocal_de_Saida_de_Agua.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1" />
 				<span asp-validation-for="Bocal_de_Saida_de_Agua.Coeficiente_de_Eficiencia_de_Solda" class="text-danger"></span>
 			</div>
+			<br>
 			<h3>Bocal de Saida de Óleo</h3>
-			<hr />
 			<div class="form-group">
 				<label asp-for="Bocal_de_Saida_de_Oleo.Material" class="control-label"></label>
 				@Html.DropDownList(
-								   "MateriaisDotBocal_de_Saida_de_Oleo",
-								   null,
-								   new { @class = "form-control" })
+	  "MateriaisDotBocal_de_Saida_de_Oleo",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Bocal_de_Saida_de_Oleo.Material" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Saida_de_Oleo.Diametro_Nominal" class="control-label"></label>
-				<input asp-for="Bocal_de_Saida_de_Oleo.Diametro_Nominal" class="form-control" value="250.0"/>
+				<input asp-for="Bocal_de_Saida_de_Oleo.Diametro_Nominal" class="form-control" value="250.0" />
 				<span asp-validation-for="Bocal_de_Saida_de_Oleo.Diametro_Nominal" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocal_de_Saida_de_Oleo.Coeficiente_de_Eficiencia_de_Solda" class="control-label"></label>
-				<input asp-for="Bocal_de_Saida_de_Oleo.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1"/>
+				<input asp-for="Bocal_de_Saida_de_Oleo.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1" />
 				<span asp-validation-for="Bocal_de_Saida_de_Oleo.Coeficiente_de_Eficiencia_de_Solda" class="text-danger"></span>
 			</div>
+			<br>
 			<h3>Dreno</h3>
-			<hr />
 			<div class="form-group">
 				<label asp-for="Dreno.Material" class="control-label"></label>
 				@Html.DropDownList(
-								   "MateriaisDotDreno",
-								   null,
-								   new { @class = "form-control" })
+	  "MateriaisDotDreno",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Dreno.Material" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Dreno.Diametro_Nominal" class="control-label"></label>
-				<input asp-for="Dreno.Diametro_Nominal" class="form-control" value="80.0"/>
+				<input asp-for="Dreno.Diametro_Nominal" class="form-control" value="80.0" />
 				<span asp-validation-for="Dreno.Diametro_Nominal" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Dreno.Coeficiente_de_Eficiencia_de_Solda" class="control-label"></label>
-				<input asp-for="Dreno.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1"/>
+				<input asp-for="Dreno.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1" />
 				<span asp-validation-for="Dreno.Coeficiente_de_Eficiencia_de_Solda" class="text-danger"></span>
 			</div>
+			<br>
 			<h3>Respiradouro</h3>
-			<hr />
 			<div class="form-group">
 				<label asp-for="Respiradouro.Material" class="control-label"></label>
 				@Html.DropDownList(
-								   "MateriaisDotRespiradouro",
-								   null,
-								   new { @class = "form-control" })
+	  "MateriaisDotRespiradouro",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Respiradouro.Material" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Respiradouro.Diametro_Nominal" class="control-label"></label>
-				<input asp-for="Respiradouro.Diametro_Nominal" class="form-control" value="80.0"/>
+				<input asp-for="Respiradouro.Diametro_Nominal" class="form-control" value="80.0" />
 				<span asp-validation-for="Respiradouro.Diametro_Nominal" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Respiradouro.Coeficiente_de_Eficiencia_de_Solda" class="control-label"></label>
-				<input asp-for="Respiradouro.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1"/>
+				<input asp-for="Respiradouro.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1" />
 				<span asp-validation-for="Respiradouro.Coeficiente_de_Eficiencia_de_Solda" class="text-danger"></span>
 			</div>
+			<br>
 			<h3>Bocas de Visita</h3>
-			<hr />
 			<div class="form-group">
 				<label asp-for="Bocas_de_Visita.Material" class="control-label"></label>
 				@Html.DropDownList(
-								   "MateriaisDotBocas_de_Visita",
-								   null,
-								   new { @class = "form-control" })
+	  "MateriaisDotBocas_de_Visita",
+	  null,
+	  new { @class = "form-control" })
 				<span asp-validation-for="Bocas_de_Visita.Material" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocas_de_Visita.Diametro_Nominal" class="control-label"></label>
-				<input asp-for="Bocas_de_Visita.Diametro_Nominal" class="form-control" value="581.6"/>
+				<input asp-for="Bocas_de_Visita.Diametro_Nominal" class="form-control" value="581.6" />
 				<span asp-validation-for="Bocas_de_Visita.Diametro_Nominal" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<label asp-for="Bocas_de_Visita.Coeficiente_de_Eficiencia_de_Solda" class="control-label"></label>
-				<input asp-for="Bocas_de_Visita.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1"/>
+				<input asp-for="Bocas_de_Visita.Coeficiente_de_Eficiencia_de_Solda" class="form-control" value="1" />
 				<span asp-validation-for="Bocas_de_Visita.Coeficiente_de_Eficiencia_de_Solda" class="text-danger"></span>
 			</div>
-			@*<div class="form-group">
-			<label asp-for="Gravidade_Especifica" class="control-label"></label>
-			<input asp-for="Gravidade_Especifica" class="form-control" value="1133" />
-			<span asp-validation-for="Gravidade_Especifica" class="text-danger"></span>
-		</div>*@
-			@*<div class="form-group">
-			<label asp-for="Teste_de_Pressao_Hidrostatica" class="control-label"></label>
-			<input asp-for="Teste_de_Pressao_Hidrostatica" class="form-control" value="3.8" />
-			<span asp-validation-for="Teste_de_Pressao_Hidrostatica" class="text-danger"></span>
-		</div>*@
-			@*<div class="form-group">
-			<label asp-for="Radiografia_do_Casco_e_Tampo" class="control-label"></label>
-			<input asp-for="Radiografia_do_Casco_e_Tampo" class="form-control" value="Total" />
-			<span asp-validation-for="Radiografia_do_Casco_e_Tampo" class="text-danger"></span>
-		</div>*@
+			<br>
 			<div class="form-group">
-				<input type="submit" value="Calcular" class="btn btn-default" />
+				<input type="submit" value="Calcular" class="btn btn-primary mb1 bg-navy" />
 			</div>
 		</form>
+		<input type="submit" onclick="location.href='javascript:window.print()';" value="Imprimir Dados Inseridos" class="btn btn-primary mb1 bg-navy" />
 	</div>
 	<div class="col-md-4">
 		<img src="~/images/vaso.png" />
