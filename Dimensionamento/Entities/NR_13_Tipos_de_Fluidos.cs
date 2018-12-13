@@ -14,9 +14,9 @@ namespace Dimensionamento.Entities
 
 		public NR_13_Tipos_de_Fluidos(DadosDeProjeto dados)
 		{
-			Categoria = CalculosGerais.getCategoriadoVaso(dados);
-			Grupo = CalculosGerais.getGrupoPotencialdeRisco(dados);
-			Classe = CalculosGerais.getClassedeFluido(dados);
+			Categoria = CalculosGerais.GetCategoriadoVaso(dados);
+			Grupo = CalculosGerais.GetGrupoPotencialdeRisco(dados);
+			Classe = CalculosGerais.GetClassedeFluido(dados);
 		}
 
 		public NR_13_Tipos_de_Fluidos(NR_13_Tipos_de_Fluidos Classificacao_NR_13)

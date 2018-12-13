@@ -18,7 +18,7 @@ namespace Dimensionamento.Controllers
 		{
 			_dbConfig = dbConfig;
 		}
-		
+
 		[HttpGet]
 		public IActionResult DadosDeProjeto()
 		{
@@ -26,7 +26,7 @@ namespace Dimensionamento.Controllers
 				(
 					new Fluidos(_dbConfig).getFluidos(),
 					"Text",
-					"Value"					
+					"Value"
 				);
 
 			ViewBag.MateriaisDotCascos_e_Tampos = new SelectList
@@ -41,19 +41,19 @@ namespace Dimensionamento.Controllers
 				(
 					new Models.Materiais(_dbConfig).getSpecificProductFormsMateriais(
 						"Forgings                                          ",
-						"Smls.pipe                                         "),
+						"Smls. pipe                                        "),
 					"Text",
 					"Value",
-					"SA-516                                            Gr.70                                                "
+					"SA-105                                            "
 				);
 			ViewBag.MateriaisDotBocaisDefault106GrB = new SelectList
 				(
 					new Models.Materiais(_dbConfig).getSpecificProductFormsMateriais(
 						"Forgings                                          ",
-						"Smls.pipe                                         "),
+						"Smls. pipe                                        "),
 					"Text",
 					"Value",
-					"SA-516                                            Gr.70                                                "
+					"SA-106                                            Gr.B                                                 "
 				);
 
 
@@ -69,8 +69,10 @@ namespace Dimensionamento.Controllers
 		[HttpPost]
 		public IActionResult DadosDeProjeto(DadosDeProjeto dados, string MateriaisDotCascos_e_Tampos, string Fluido)
 		{
-			dados.Materiais = new Entities.Materiais();
-			dados.Materiais.Cascos_e_Tampos = MateriaisDotCascos_e_Tampos;
+			dados.Materiais = new Entities.Materiais
+			{
+				Cascos_e_Tampos = MateriaisDotCascos_e_Tampos
+			};
 
 			dados.Fluido = Fluido;
 
@@ -83,7 +85,11 @@ namespace Dimensionamento.Controllers
 
 		public static DadosFullView BuildInfo(DadosDeProjeto dados)
 		{
-			dados.Maxima_Tensao_Admissivel = EspessuraDoCostado.getTensaoMaximaAdmissivel(dados);
+			var material = dados.Materiais.Cascos_e_Tampos;
+			var temperaturaDeProjeto = dados.Temperatura_de_Projeto;
+			var parte = "Cascos e Tampos";
+
+			dados.Maxima_Tensao_Admissivel = CalculosGerais.GetTensaoMaximaAdmissivel(parte, temperaturaDeProjeto, material);
 			var inputs = new DadosInputs(dados);
 			var outputs = new DadosOutputs(dados);
 

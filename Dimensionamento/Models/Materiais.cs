@@ -46,9 +46,9 @@ namespace Dimensionamento.Models
 
 		public IEnumerable<Materiais> getSpecificProductFormsMateriais(string productForm1, string productForm2)
 		{
-			var context = new DimensionamentoContext(_dbConfig);
+			var context = new DB_A4111A_tccdimuffContext5446(_dbConfig);
 
-			var Materiais = context.ParteD5A2010Pg5450.ToList();
+			var Materiais = context.ParteD5A2010Pg5446.ToList();
 
 			foreach (var material in Materiais)
 			{

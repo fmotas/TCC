@@ -5,7 +5,7 @@ namespace Dimensionamento.Cálculos
 {
 	public static class CalculosGerais
     {
-		public static int getGrupoPotencialdeRisco(DadosDeProjeto dados)
+		public static int GetGrupoPotencialdeRisco(DadosDeProjeto dados)
 		{
 			var pv = dados.Pressao_de_Operacao_Maxima * dados.Volume_Interno;
 
@@ -32,10 +32,10 @@ namespace Dimensionamento.Cálculos
 			return 0;
 		}
 
-		public static string getCategoriadoVaso(DadosDeProjeto dados)
+		public static string GetCategoriadoVaso(DadosDeProjeto dados)
 		{
-			var tipodeFluido = getClassedeFluido(dados);
-			var grupoPotencialdeRisco = getGrupoPotencialdeRisco(dados);
+			var tipodeFluido = GetClassedeFluido(dados);
+			var grupoPotencialdeRisco = GetGrupoPotencialdeRisco(dados);
 
 			var conn = new SqlConnection("Data Source = SQL5035.site4now.net; Initial Catalog = DB_A4111A_tccdimuff; User Id = DB_A4111A_tccdimuff_admin; Password = asdf1234; ");
 
@@ -55,7 +55,7 @@ namespace Dimensionamento.Cálculos
 			}
 		}
 
-		public static char getClassedeFluido(DadosDeProjeto dados)
+		public static char GetClassedeFluido(DadosDeProjeto dados)
 		{
 			var fluido = dados.Fluido;
 
@@ -93,6 +93,82 @@ namespace Dimensionamento.Cálculos
 			}
 
 			return 'D';
+		}
+
+		public static double GetTensaoMaximaAdmissivel(string parte, double temperaturaDeProjeto, string material)
+		{
+			string specNo = null;
+			string typeOrGrade = null;
+			var range = GetRange(temperaturaDeProjeto);
+			var specNoEnd = material.IndexOf("Gr.");
+			if (specNoEnd != -1)
+			{
+				specNo = material.Substring(0, specNoEnd);
+				var grStart = material.LastIndexOf("Gr.") + 3;
+				typeOrGrade = "AND TYPEORGRADE = " + material.Substring(grStart);
+			}
+			else
+			{
+				specNo = material;
+			}
+
+			var conn = new SqlConnection("Data Source = SQL5035.site4now.net; Initial Catalog = DB_A4111A_tccdimuff; User Id = DB_A4111A_tccdimuff_admin; Password = asdf1234; ");
+
+			conn.Open();
+
+			string db1 = "";
+			string db2 = "";
+
+			if (parte == "Cascos e Tampos")
+			{
+				db1 = "Parte_D_5-A_2010_PG5452";
+				db2 = "Parte_D_5-A_2010_PG5450";
+			}
+			if (parte == "Bocal")
+			{
+				db1 = "Parte_D_5-A_2010_PG5446";
+				db2 = "Parte_D_5-A_2010_PG5448";
+			}
+
+			var query = $@"
+							SELECT * FROM [DB_A4111A_TCCDIMUFF].[DBO].[{db1}] 
+								WHERE [LINENO] IN
+									(SELECT[LINENO] FROM [DB_A4111A_TCCDIMUFF].[DBO].[{db2}] 
+										WHERE SPECNO = '{specNo}' {typeOrGrade})";
+
+			var command = new SqlCommand(query, conn);
+
+			using (SqlDataReader reader = command.ExecuteReader())
+			{
+				reader.Read();
+				var result = reader[range].ToString();
+				return double.Parse(result);
+			}
+		}
+
+		public static string GetRange(double temperatura)
+		{
+			if (temperatura > -30 && temperatura <= 40)
+			{
+				return "-30To40";
+			}
+			if (temperatura > 40 && temperatura <= 65)
+			{
+				return "65";
+			}
+			if (temperatura > 65 && temperatura <= 100)
+			{
+				return "100";
+			}
+
+			for (int i = 100; i < 500; i += 25)
+			{
+				if (temperatura > i && temperatura <= i + 25)
+				{
+					return (i + 25).ToString();
+				}
+			}
+			return "";
 		}
 	}
 }

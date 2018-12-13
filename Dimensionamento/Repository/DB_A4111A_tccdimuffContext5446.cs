@@ -1,16 +1,19 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace Dimensionamento.Models
 {
-    public partial class DB_A4111A_tccdimuffContext : DbContext
+	public partial class DB_A4111A_tccdimuffContext5446 : DbContext
     {
-        public DB_A4111A_tccdimuffContext()
+		private readonly IOptions<DbConfig> _dbConfig;
+		private readonly string _connectionString;
+		public DB_A4111A_tccdimuffContext5446(IOptions<DbConfig> dbConfig)
         {
-        }
+			_dbConfig = dbConfig;
+			_connectionString = _dbConfig.Value.DataSource;
+		}
 
-        public DB_A4111A_tccdimuffContext(DbContextOptions<DB_A4111A_tccdimuffContext> options)
+        public DB_A4111A_tccdimuffContext5446(DbContextOptions<DB_A4111A_tccdimuffContext5446> options)
             : base(options)
         {
         }
@@ -21,7 +24,6 @@ namespace Dimensionamento.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=SQL5035.site4now.net;User Id=DB_A4111A_tccdimuff_admin;Password=asdf1234;Database=DB_A4111A_tccdimuff;");
             }
         }

@@ -1,13 +1,11 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Options;
 
 namespace Dimensionamento.teste
 {
-    public partial class DimensionamentoContext : DbContext
+	public partial class DimensionamentoContext : DbContext
 	{
 		private readonly IOptions<DbConfig> _dbConfig;
 		private readonly string _connectionString;
@@ -35,7 +33,6 @@ namespace Dimensionamento.teste
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer(_connectionString);
             }
         }
