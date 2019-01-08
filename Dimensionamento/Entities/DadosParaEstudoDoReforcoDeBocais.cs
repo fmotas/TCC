@@ -24,5 +24,6 @@ namespace Dimensionamento.Entities
 		public double Leg_Weld_L41 { get; set; }
 		[Display(Name = "Leg weld (L42)")]
 		public double Leg_Weld_L42 { get; set; }
+		[Display(Name = "PMTA(Corroído e Quente)")]		public double PMTA { get; set; }
 	}
 }

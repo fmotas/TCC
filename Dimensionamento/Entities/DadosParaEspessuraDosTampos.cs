@@ -18,10 +18,10 @@ namespace Dimensionamento.Entities
 		public double Raio_do_Rebordo { get; set; }
 		[Display(Name = "Fator do Tampo Elíptico")]
 		public double Fator_do_Tampo_Eliptico { get; set; }
-		[Display(Name = "Módulo de Elasticidade à Temperatura Máxima de Projeto(Mpa)")]
-		public double Modulo_de_Elasticidade_a_Temperatura_Maxima_de_Projeto { get; set; }
-		[Display(Name = "Tensão de Escoamento do Material à Temperatura Máxima de Projeto(Mpa)")]
-		public double Tensao_de_Escoamento_do_Material_a_Temperatura_de_Projeto { get; set; }
+		//[Display(Name = "Módulo de Elasticidade à Temperatura Máxima de Projeto(Mpa)")]
+		//public double Modulo_de_Elasticidade_a_Temperatura_Maxima_de_Projeto { get; set; }
+		//[Display(Name = "Tensão de Escoamento do Material à Temperatura Máxima de Projeto(Mpa)")]
+		//public double Tensao_de_Escoamento_do_Material_a_Temperatura_de_Projeto { get; set; }
 		[Display(Name = "Espessura dos Tampos(mm)")]
 		public double Espessura_dos_Tampo { get; set; }
 	}

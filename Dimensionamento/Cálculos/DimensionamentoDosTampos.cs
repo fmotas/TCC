@@ -174,8 +174,8 @@ namespace Dimensionamento.Cálculos
 			E = dados.Eficiencia_de_Junta_dos_Tampos;
 			S = dados.Maxima_Tensao_Admissivel;
 			C = dados.Sobrespessura_de_Corrosao;
-			Et = dados.Modulo_de_Elasticidade_a_Temperatura_Maxima_de_Projeto;
-			Sy = dados.Tensao_de_Escoamento_do_Material_a_Temperatura_de_Projeto;
+			Et = 197852.64;
+			Sy = CalculosGerais.GetTensaoMaximaAdmissivelKsi(dados.Temperatura_de_Projeto, dados.Materiais.Cascos_e_Tampos);//dados.Tensao_de_Escoamento_do_Material_a_Temperatura_de_Projeto;
 			Fte = dados.Fator_do_Tampo_Eliptico;
 			EspessuraDosTampos = dados.Espessura_do_Costado;
 		}

@@ -146,6 +146,43 @@ namespace Dimensionamento.Cálculos
 			}
 		}
 
+		public static double GetTensaoMaximaAdmissivelKsi(double temperaturaDeProjeto, string material)
+		{
+			string specNo = null;
+			string typeOrGrade = null;
+			var range = GetRangeKsi(temperaturaDeProjeto);
+			var specNoEnd = material.IndexOf("Gr.");
+			if (specNoEnd != -1)
+			{
+				specNo = material.Substring(0, specNoEnd);
+				var grStart = material.LastIndexOf("Gr.") + 3;
+				typeOrGrade = "AND TYPEORGRADE = '" + material.Substring(grStart) + "'";
+			}
+			else
+			{
+				specNo = material;
+			}
+
+			var conn = new SqlConnection("Data Source = SQL5035.site4now.net; Initial Catalog = DB_A4111A_tccdimuff; User Id = DB_A4111A_tccdimuff_admin; Password = asdf1234; ");
+
+			conn.Open();
+			
+			var query = $@"
+							SELECT * FROM [DB_A4111A_TCCDIMUFF].[DBO].[Parte_D_Y-1_2010_PG4702] 
+								WHERE [LINENO] IN
+									(SELECT[LINENO] FROM [DB_A4111A_TCCDIMUFF].[DBO].[Parte_D_Y-1_2010_PG4700] 
+										WHERE SPECNO = '{specNo}' {typeOrGrade})";
+
+			var command = new SqlCommand(query, conn);
+
+			using (SqlDataReader reader = command.ExecuteReader())
+			{
+				reader.Read();
+				var result = reader[range].ToString();
+				return double.Parse(result) * 6.9;
+			}
+		}
+
 		public static string GetRange(double temperatura)
 		{
 			if (temperatura > -30 && temperatura <= 40)
@@ -166,6 +203,23 @@ namespace Dimensionamento.Cálculos
 				if (temperatura > i && temperatura <= i + 25)
 				{
 					return (i + 25).ToString();
+				}
+			}
+			return "";
+		}
+
+		public static string GetRangeKsi(double temperatura)
+		{
+			if (temperatura > -20 && temperatura <= 100)
+			{
+				return "-20To100";
+			}
+
+			for (int i = 100; i < 500; i += 50)
+			{
+				if (temperatura > i && temperatura <= i + 50)
+				{
+					return (i + 50).ToString();
 				}
 			}
 			return "";

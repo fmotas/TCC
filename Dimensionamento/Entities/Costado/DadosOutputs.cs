@@ -122,42 +122,42 @@ namespace Dimensionamento.Entities.Costado
 			get => double.Parse(pEspessura_Bocal_de_Valvula_de_Seguranca_t2.ToString("0.000"));
 			set => pEspessura_Bocal_de_Valvula_de_Seguranca_t2 = value;
 		}
-		[Display(Name = "t1 Sem Sobrespessura de Corrosao(mm)")]
-		public double Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao
-		{
-			get => double.Parse(pEspessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao.ToString("0.000"));
-			set => pEspessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao = value;
-		}
-		[Display(Name = "t1 Com Sobrespessura de Corrosao(mm)")]
-		public double Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao
-		{
-			get => double.Parse(pEspessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao.ToString("0.000"));
-			set => pEspessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao = value;
-		}
-		[Display(Name = "t2(mm)")]
-		public double Espessura_Bocal_de_Saida_de_Agua_t2
-		{
-			get => double.Parse(pEspessura_Bocal_de_Saida_de_Agua_t2.ToString("0.000"));
-			set => pEspessura_Bocal_de_Saida_de_Agua_t2 = value;
-		}
-		[Display(Name = "t1 Sem Sobrespessura de Corrosao(mm)")]
-		public double Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao
-		{
-			get => double.Parse(pEspessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao.ToString("0.000"));
-			set => pEspessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao = value;
-		}
-		[Display(Name = "t1 Com Sobrespessura de Corrosao(mm)")]
-		public double Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao
-		{
-			get => double.Parse(pEspessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao.ToString("0.000"));
-			set => pEspessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao = value;
-		}
-		[Display(Name = "t2(mm)")]
-		public double Espessura_Bocal_de_Saida_de_Oleo_t2
-		{
-			get => double.Parse(pEspessura_Bocal_de_Saida_de_Oleo_t2.ToString("0.000"));
-			set => pEspessura_Bocal_de_Saida_de_Oleo_t2 = value;
-		}
+		//[Display(Name = "t1 Sem Sobrespessura de Corrosao(mm)")]
+		//public double Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao
+		//{
+		//	get => double.Parse(pEspessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao.ToString("0.000"));
+		//	set => pEspessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao = value;
+		//}
+		//[Display(Name = "t1 Com Sobrespessura de Corrosao(mm)")]
+		//public double Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao
+		//{
+		//	get => double.Parse(pEspessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao.ToString("0.000"));
+		//	set => pEspessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao = value;
+		//}
+		//[Display(Name = "t2(mm)")]
+		//public double Espessura_Bocal_de_Saida_de_Agua_t2
+		//{
+		//	get => double.Parse(pEspessura_Bocal_de_Saida_de_Agua_t2.ToString("0.000"));
+		//	set => pEspessura_Bocal_de_Saida_de_Agua_t2 = value;
+		//}
+		//[Display(Name = "t1 Sem Sobrespessura de Corrosao(mm)")]
+		//public double Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao
+		//{
+		//	get => double.Parse(pEspessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao.ToString("0.000"));
+		//	set => pEspessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao = value;
+		//}
+		//[Display(Name = "t1 Com Sobrespessura de Corrosao(mm)")]
+		//public double Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao
+		//{
+		//	get => double.Parse(pEspessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao.ToString("0.000"));
+		//	set => pEspessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao = value;
+		//}
+		//[Display(Name = "t2(mm)")]
+		//public double Espessura_Bocal_de_Saida_de_Oleo_t2
+		//{
+		//	get => double.Parse(pEspessura_Bocal_de_Saida_de_Oleo_t2.ToString("0.000"));
+		//	set => pEspessura_Bocal_de_Saida_de_Oleo_t2 = value;
+		//}
 		[Display(Name = "t1 Sem Sobrespessura de Corrosao(mm)")]
 		public double Espessura_Dreno_t1_Sem_Sobrespessura_de_Corrosao
 		{
@@ -239,13 +239,13 @@ namespace Dimensionamento.Entities.Costado
 			Espessura_Bocal_de_Valvula_de_Seguranca_t1_Com_Sobrespessura_de_Corrosao = dados.Bocal_de_Valvula_de_Seguranca.t1_Com_Sobrespessura_de_Corrosao;
 			Espessura_Bocal_de_Valvula_de_Seguranca_t2 = dados.Bocal_de_Valvula_de_Seguranca.t2;
 
-			Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao = dados.Bocal_de_Saida_de_Agua.t1_Sem_Sobrespessura_de_Corrosao;
-			Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao = dados.Bocal_de_Saida_de_Agua.t1_Com_Sobrespessura_de_Corrosao;
-			Espessura_Bocal_de_Saida_de_Agua_t2 = dados.Bocal_de_Saida_de_Agua.t2;
+			//Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao = dados.Bocal_de_Saida_de_Agua.t1_Sem_Sobrespessura_de_Corrosao;
+			//Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao = dados.Bocal_de_Saida_de_Agua.t1_Com_Sobrespessura_de_Corrosao;
+			//Espessura_Bocal_de_Saida_de_Agua_t2 = dados.Bocal_de_Saida_de_Agua.t2;
 
-			Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao = dados.Bocal_de_Saida_de_Oleo.t1_Sem_Sobrespessura_de_Corrosao;
-			Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao = dados.Bocal_de_Saida_de_Oleo.t1_Com_Sobrespessura_de_Corrosao;
-			Espessura_Bocal_de_Saida_de_Oleo_t2 = dados.Bocal_de_Saida_de_Oleo.t2;
+			//Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao = dados.Bocal_de_Saida_de_Oleo.t1_Sem_Sobrespessura_de_Corrosao;
+			//Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao = dados.Bocal_de_Saida_de_Oleo.t1_Com_Sobrespessura_de_Corrosao;
+			//Espessura_Bocal_de_Saida_de_Oleo_t2 = dados.Bocal_de_Saida_de_Oleo.t2;
 
 			Espessura_Dreno_t1_Sem_Sobrespessura_de_Corrosao = dados.Dreno.t1_Sem_Sobrespessura_de_Corrosao;
 			Espessura_Dreno_t1_Com_Sobrespessura_de_Corrosao = dados.Dreno.t1_Com_Sobrespessura_de_Corrosao;
@@ -298,13 +298,13 @@ namespace Dimensionamento.Entities.Costado
 			Espessura_Bocal_de_Valvula_de_Seguranca_t1_Com_Sobrespessura_de_Corrosao = outputs.Espessura_Bocal_de_Valvula_de_Seguranca_t1_Com_Sobrespessura_de_Corrosao;
 			Espessura_Bocal_de_Valvula_de_Seguranca_t2 = outputs.Espessura_Bocal_de_Valvula_de_Seguranca_t2;
 
-			Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao = outputs.Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao;
-			Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao = outputs.Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao;
-			Espessura_Bocal_de_Saida_de_Agua_t2 = outputs.Espessura_Bocal_de_Saida_de_Agua_t2;
+			//Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao = outputs.Espessura_Bocal_de_Saida_de_Agua_t1_Sem_Sobrespessura_de_Corrosao;
+			//Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao = outputs.Espessura_Bocal_de_Saida_de_Agua_t1_Com_Sobrespessura_de_Corrosao;
+			//Espessura_Bocal_de_Saida_de_Agua_t2 = outputs.Espessura_Bocal_de_Saida_de_Agua_t2;
 
-			Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao = outputs.Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao;
-			Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao = outputs.Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao;
-			Espessura_Bocal_de_Saida_de_Oleo_t2 = outputs.Espessura_Bocal_de_Saida_de_Oleo_t2;
+			//Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao = outputs.Espessura_Bocal_de_Saida_de_Oleo_t1_Sem_Sobrespessura_de_Corrosao;
+			//Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao = outputs.Espessura_Bocal_de_Saida_de_Oleo_t1_Com_Sobrespessura_de_Corrosao;
+			//Espessura_Bocal_de_Saida_de_Oleo_t2 = outputs.Espessura_Bocal_de_Saida_de_Oleo_t2;
 
 			Espessura_Dreno_t1_Sem_Sobrespessura_de_Corrosao = outputs.Espessura_Dreno_t1_Sem_Sobrespessura_de_Corrosao;
 			Espessura_Dreno_t1_Com_Sobrespessura_de_Corrosao = outputs.Espessura_Dreno_t1_Com_Sobrespessura_de_Corrosao;
